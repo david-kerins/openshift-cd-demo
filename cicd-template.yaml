@@ -142,10 +142,11 @@ objects:
               }
               stage('Build Image') {
                 steps {
-                  sh "rm -rf oc-build && mkdir -p oc-build/configuration"
+                  sh "rm -rf oc-build && mkdir -p oc-build/configuration && mkdir -p oc-build/deployments/configuration"
                   sh "cp target/openshift-tasks.war oc-build/deployments/ROOT.war"
                   sh "cp target/openshift-tasks.war oc-build/deployments/ROOTDDK.war"
                   sh "cp configuration/*.properties oc-build/configuration"
+                  sh "cp configuration/*.properties oc-build/deployments/configuration"
 
                   script {
                     openshift.withCluster() {
