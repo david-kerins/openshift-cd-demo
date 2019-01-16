@@ -25,7 +25,7 @@ parameters:
   required: true
 - displayName: Ephemeral
   description: Use no persistent storage for Gogs and Nexus
-  value: "true"
+  value: "false"
   name: EPHEMERAL
   required: true
 - description: Webhook secret
@@ -349,14 +349,21 @@ objects:
                   --param=HOSTNAME=$GOGS_HOSTNAME \
                   --param=SKIP_TLS_VERIFY=true
             fi
+            #ddk added below line
+            oc set resources dc/gogs --requests=cpu=1,memory=1Gi --limits=cpu=2,memory=2Gi 
             
             sleep 5
 
             if [ "${EPHEMERAL}" == "true" ] ; then
-              oc new-app -f https://raw.githubusercontent.com/siamaksade/sonarqube/master/sonarqube-template.yml --param=SONARQUBE_MEMORY_LIMIT=6Gi
+             #oc new-app -f https://raw.githubusercontent.com/siamaksade/sonarqube/master/sonarqube-template.yml --param=SONARQUBE_MEMORY_LIMIT=6Gi
+              oc new-app -f https://raw.githubusercontent.com/RHsyseng/docker-rhel-sonarqube/master/templates/sonarqube-ephemeral-template.yaml --param=SONARQUBE_MEMORY_LIMITS=6Gi
             else
-              oc new-app -f https://raw.githubusercontent.com/siamaksade/sonarqube/master/sonarqube-persistent-template.yml --param=SONARQUBE_MEMORY_LIMIT=6Gi
+              oc new-app -f https://raw.githubusercontent.com/RHsyseng/docker-rhel-sonarqube/master/templates/sonarqube-postgresql-template.yaml --param=SONARQUBE_MEMORY_LIMITS=6Gi
+             #oc new-app -f https://raw.githubusercontent.com/siamaksade/sonarqube/master/sonarqube-persistent-template.yml --param=SONARQUBE_MEMORY_LIMIT=6Gi
             fi
+
+            #ddk added this line
+            oc set resources dc/sonarqube --requests=cpu=1,memory=6Gi --limits=cpu=2,memory=8Gi 
 
             if [ "${DEPLOY_CHE}" == "true" ] ; then
               oc process -f https://raw.githubusercontent.com/minishift/minishift/master/addons/che/templates/che-single-user.yml \
