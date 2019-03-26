@@ -18,3 +18,12 @@ oc create -f pv0017.json
 oc create -f pv0018.json
 oc create -f pv0019.json
 oc create -f pv0020.json
+oc create -f pv0021.json
+oc create -f pv0022.json
+oc create -f pv0023.json
+oc create -f pv0024.json
+oc create -f pv0025.json
+oc create -f pv0026.json
+oc create -f pv0027.json
+oc create -f pv0028.json
+oc create -f pv0029.json

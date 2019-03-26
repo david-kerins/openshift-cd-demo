@@ -18,3 +18,12 @@ oc delete pv pv0017
 oc delete pv pv0018
 oc delete pv pv0019
 oc delete pv pv0020
+oc delete pv pv0021
+oc delete pv pv0022
+oc delete pv pv0023
+oc delete pv pv0024
+oc delete pv pv0025
+oc delete pv pv0026
+oc delete pv pv0027
+oc delete pv pv0028
+oc delete pv pv0029
