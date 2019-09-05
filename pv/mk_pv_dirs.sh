@@ -27,6 +27,15 @@ mkdir -p /var/lib/origin/openshift.local.volumes/pv/pv0026
 mkdir -p /var/lib/origin/openshift.local.volumes/pv/pv0027
 mkdir -p /var/lib/origin/openshift.local.volumes/pv/pv0028
 mkdir -p /var/lib/origin/openshift.local.volumes/pv/pv0029
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvrwx01
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs01
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs02
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs03
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs04
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs05
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs06
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs07
+mkdir -p /var/lib/origin/openshift.local.volumes/pv/pvgfs08
 
 chmod 777 /var/lib/origin/openshift.local.volumes/pv/pv0001
 chmod 777 /var/lib/origin/openshift.local.volumes/pv/pv0002
@@ -57,3 +66,12 @@ chmod 777 /var/lib/origin/openshift.local.volumes/pv/pv0026
 chmod 777 /var/lib/origin/openshift.local.volumes/pv/pv0027
 chmod 777 /var/lib/origin/openshift.local.volumes/pv/pv0028
 chmod 777 /var/lib/origin/openshift.local.volumes/pv/pv0029
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvrwx01
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs01
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs02
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs03
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs04
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs05
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs06
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs07
+chmod 777 /var/lib/origin/openshift.local.volumes/pv/pvgfs08

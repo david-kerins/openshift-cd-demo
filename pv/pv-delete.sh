@@ -27,3 +27,12 @@ oc delete pv pv0026
 oc delete pv pv0027
 oc delete pv pv0028
 oc delete pv pv0029
+oc delete pv pvgfs01
+oc delete pv pvgfs02
+oc delete pv pvgfs03
+oc delete pv pvgfs04
+oc delete pv pvgfs05
+oc delete pv pvgfs06
+oc delete pv pvgfs07
+oc delete pv pvgfs08
+oc delete pv pvrwx01

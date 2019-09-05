@@ -27,3 +27,12 @@ oc create -f pv0026.json
 oc create -f pv0027.json
 oc create -f pv0028.json
 oc create -f pv0029.json
+oc create -f pvgfs01.json
+oc create -f pvgfs02.json
+oc create -f pvgfs03.json
+oc create -f pvgfs04.json
+oc create -f pvgfs05.json
+oc create -f pvgfs06.json
+oc create -f pvgfs07.json
+oc create -f pvgfs08.json
+oc create -f pvrwx01.json
